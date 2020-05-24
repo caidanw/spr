@@ -22,6 +22,7 @@ if __name__ == '__main__':
     print(buf.getvalue())
 
     branch_commits = buf.getvalue().splitlines()
+    branch_commits.reverse()
     for idx, ll in enumerate(branch_commits):
         commit = Commit(ll)
         print(idx, commit.sha, commit.message)
